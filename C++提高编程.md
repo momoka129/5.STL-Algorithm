@@ -1617,3 +1617,66 @@ v1 = v2 即可
 
 
 #### 5.5 常用算术生成算法
+
+- 属于小型算法，使用时包含头文件`#include<numeric>`
+
+`accumulate`          //计算容器元素累计总和
+
+`fill`          //向容器中添加元素
+
+
+
+##### 5.5.1 accumulate
+
+`accumulate(iterator beg, iterator end, value);`
+
+value: 起始累加值，不需要就填0
+
+
+
+##### 5.5.2 fill
+
+`fill(iterator beg, iterator end, value);`
+
+
+
+#### 5.6 常用集合算法
+
+- `set_intersection`       //求两个容器的交集
+- `set_union`                  //并集
+- `set_difference`              //差集
+
+
+
+##### 5.6.1 set_intersection
+
+`set_intersection(iteractor beg1, end1, beg2, end2, iterator dest);`
+
+- 两个集合必须是**有序序列**
+- 目标容器开辟空间需要从两个容器中**取小值**
+- 返回交集的最后一个元素的迭代器位置
+
+
+
+##### 5.6.2 set_union
+
+`set_union(iterator beg1, end1, beg2, end2, dest);`
+
+- 两个集合必须是**有序序列**
+- 目标容器开辟空间需要两个**容器相加**
+- 返回交集的最后一个元素的迭代器位置
+
+
+
+##### 5.6.3 set_difference
+
+`set_difference(iterator beg)`
+
+v1 和 v2
+
+v2 和 v1
+
+- 两个集合必须是**有序序列**
+- 目标容器开辟空间需要**取两个容器较大值**
+- 返回交集的最后一个元素的迭代器位置
+
