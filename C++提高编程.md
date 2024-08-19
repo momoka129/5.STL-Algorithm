@@ -1550,4 +1550,70 @@ _pred函数或者谓词（返回bool'类型的仿函数）
 
 
 
-##### 5.3.2 random_
+##### 5.3.2 random_shuffle
+
+`random_shuffle(iterator beg, iterator end);`
+
+> 记得加随机数种子
+
+
+
+##### 5.3.3 merge
+
+`merge(iterator beg1, iterator end1, iterator beg2, iterator end2, iterator dest);`
+
+//dest    目标容器开始迭代器
+
+
+
+##### 5.3.4 reverse
+
+`reverse(iterator beg, iterator end);`
+
+
+
+#### 5.4 常用拷贝和替换算法
+
+`copy `                      //拷贝到另一容器
+
+`replace`                           //将旧元素修改为新元素
+
+`replace_if`                //容器内指定范围满足条件的元素替换为新元素
+
+`swap`             //互换两个容器的元素
+
+
+
+##### 5.4.1 copy
+
+`copy(iterator beg, iterator end, iterator dest);`
+
+v1 = v2 即可
+
+
+
+##### 5.4.2 replace
+
+`replace(iterator beg, iterator end, oldvalue, newvalue);`
+
+
+
+##### 5.4.3 replace_if
+
+`replace_if(iterator beg, iterator end, _Pred, newValue);`
+
+
+
+> 利用仿函数可以灵活筛选满足的条件
+
+
+
+##### 5.4.4 swap
+
+`swap(container c1, container c2);`
+
+- 同种容器
+
+
+
+#### 5.5 常用算术生成算法
